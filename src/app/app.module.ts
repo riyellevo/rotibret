@@ -11,7 +11,18 @@ import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { RegisterPage } from '../pages/register/register';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
+    const firebaseAuth= {
+        apiKey: "AIzaSyD1YKYgoywKMAXcIrXPMt7QmRMCQdL3fr0",
+        authDomain: "meong-8704a.firebaseapp.com",
+        databaseURL: "https://meong-8704a.firebaseio.com",
+        projectId: "meong-8704a",
+        storageBucket: "",
+        messagingSenderId: "97474052902"
+    };
 @NgModule({
   declarations: [
     MyApp,
@@ -20,11 +31,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     TesPage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseAuth),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,7 +48,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     TesPage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,
