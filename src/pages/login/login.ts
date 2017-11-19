@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams ,AlertController} from 'ionic-angular';
 import {HelloIonicPage} from '../hello-ionic/hello-ionic';
 
@@ -7,6 +7,8 @@ import {HelloIonicPage} from '../hello-ionic/hello-ionic';
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
+ nasiayamgore
+ sss
  */
 
 @IonicPage()
